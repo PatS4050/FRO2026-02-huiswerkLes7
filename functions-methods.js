@@ -63,7 +63,6 @@ console.log(typeOfEmail("user@gmail"));
 // checkEmailValidity("tessmellink@novi,nl") geeft false - want er staat een komma in
 
 function checkEmailValidity (userInputEmail) {
-    const emailIndex = userInputEmail.indexOf("@");
     if (userInputEmail.includes(",")){
         return userInputEmail = false }
     if (userInputEmail.lastIndexOf(".") === userInputEmail.length) {
