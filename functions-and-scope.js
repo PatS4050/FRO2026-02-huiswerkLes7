@@ -14,6 +14,21 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan bijhouden?
 // Log het antwoord in de terminal.
 
+// itereer de array
+// function cumLaude
+let countGrades = 0;
+for (let i = 0; i <grades.length ; i++) {
+    if (grades[i] >= 8) {
+        countGrades++;
+    }
+    console.log(countGrades)
+    // const gradeCumLaude= (grades[i] >= 8);
+    // console.log(gradeCumLaude.length)
+}
+// tel alle cijfers die >= 8
+// return de functie
+// doe een console.log buiten de functie
+
 // ---- Verwachte uitkomst: 6
 
 
