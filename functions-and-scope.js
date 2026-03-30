@@ -116,8 +116,18 @@ console.log(averageGrade([8, 9, 4, 6, 10]).toFixed(2))
 // * Hoe zorgt ik ervoor dat wanneer ik een cijfer tegenkom die aan de conditie voldoet, ik dit ergens kan opslaan?
 // Log het antwoord in de terminal.
 
-// ---- Verwachte uitkomst: 9
+// itereer alle cijfers in de reeks
+// geef het hoogste cijfer terug met Math.max
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
+function highestGrade(gradesInput) {
+    for (let i = 0; i< gradesInput.length; i++) return (gradesInput);
+}
+
+// ---- Verwachte uitkomst: 9
+console.log(Math.max(highestGrade(grades)))
+console.log(Math.max(highestGrade([6, 4, 5])))
+console.log(Math.max(highestGrade([8, 9, 4, 6, 10])))
 
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
