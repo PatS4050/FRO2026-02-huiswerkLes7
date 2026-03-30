@@ -16,15 +16,21 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // itereer de array
 // function cumLaude
+
 let countGrades = 0;
 for (let i = 0; i <grades.length ; i++) {
     if (grades[i] >= 8) {
         countGrades++;
     }
-    console.log(countGrades)
+    // console.log(countGrades.substring(countGrades.length))
+    // console.log(countGrades)
+}
+console.log(countGrades)
+
+
     // const gradeCumLaude= (grades[i] >= 8);
     // console.log(gradeCumLaude.length)
-}
+
 // tel alle cijfers die >= 8
 // return de functie
 // doe een console.log buiten de functie
@@ -42,8 +48,16 @@ for (let i = 0; i <grades.length ; i++) {
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
-
-
+function cumLaude() {
+let countGrades = 0;
+for (let i = 0; i <grades.length ; i++) {
+    if (grades[i] >= 8) {
+        countGrades++;
+    }
+    // console.log(countGrades.substring(countGrades.length))
+    // console.log(countGrades)
+}}
+console.log(cumLaude([grades]))
 
 /* Opdracht  2: Gemiddeld cijfer */
 
@@ -57,6 +71,22 @@ for (let i = 0; i <grades.length ; i++) {
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
+// Het gemiddelde wordt berekent door alle cijfers op te tellen en te delen door het aantal cifers
+// Je verzamelt alle cijfers en het aantal
+// De cifers staatn in een array en je loopt ze door met een for loop met een .length parameter
+
+function averageGrade(gradesInput) {
+    let gradesTotal = 0
+    for (let i = 0; i< gradesInput.length; i++) {
+            gradesTotal += gradesInput[i];
+    }
+ return gradesTotal / gradesInput.length
+    // return Math.round(gradesTotal / gradesInput.length)
+
+}
+
+
+// console.log(gradesAverage(grades))
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
@@ -73,8 +103,9 @@ for (let i = 0; i <grades.length ; i++) {
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
-
-
+console.log(averageGrade(grades).toFixed(2))
+console.log(averageGrade([6, 4, 5]).toFixed(2))
+console.log(averageGrade([8, 9, 4, 6, 10]).toFixed(2))
 
 /* Bonusopdracht: hoogste cijfer */
 
