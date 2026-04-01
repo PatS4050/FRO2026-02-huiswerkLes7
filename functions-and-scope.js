@@ -18,7 +18,7 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // function cumLaude
 
 let countGrades = 0;
-for (let i = 0; i <grades.length ; i++) {
+for (let i = 0; i < grades.length; i++) {
     if (grades[i] >= 8) {
         countGrades++;
     }
@@ -28,8 +28,8 @@ for (let i = 0; i <grades.length ; i++) {
 console.log(countGrades)
 
 
-    // const gradeCumLaude= (grades[i] >= 8);
-    // console.log(gradeCumLaude.length)
+// const gradeCumLaude= (grades[i] >= 8);
+// console.log(gradeCumLaude.length)
 
 // tel alle cijfers die >= 8
 // return de functie
@@ -48,16 +48,20 @@ console.log(countGrades)
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
-function cumLaude() {
-let countGrades = 0;
-for (let i = 0; i <grades.length ; i++) {
-    if (grades[i] >= 8) {
-        countGrades++;
+function cumLaude(grades) {
+    let countGrades = 0;
+    for (let i = 0; i < grades.length; i++) {
+        if (grades[i] >= 8) {
+            countGrades++;
+        }
+        // console.log(countGrades.substring(countGrades.length))
+        // console.log(countGrades)
     }
-    // console.log(countGrades.substring(countGrades.length))
-    // console.log(countGrades)
-}}
-console.log(cumLaude([grades]))
+    return countGrades;
+}
+console.log(cumLaude(grades))
+console.log(cumLaude([6, 4, 5]))
+console.log(cumLaude([8, 9, 4, 6, 10]))
 
 /* Opdracht  2: Gemiddeld cijfer */
 
@@ -77,10 +81,10 @@ console.log(cumLaude([grades]))
 
 function averageGrade(gradesInput) {
     let gradesTotal = 0
-    for (let i = 0; i< gradesInput.length; i++) {
-            gradesTotal += gradesInput[i];
+    for (let i = 0; i < gradesInput.length; i++) {
+        gradesTotal += gradesInput[i];
     }
- return gradesTotal / gradesInput.length
+    return gradesTotal / gradesInput.length
     // return Math.round(gradesTotal / gradesInput.length)
 
 }
@@ -121,13 +125,19 @@ console.log(averageGrade([8, 9, 4, 6, 10]).toFixed(2))
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
 function highestGrade(gradesInput) {
-    for (let i = 0; i< gradesInput.length; i++) return (gradesInput);
+    let gradeMax = 0
+    for (let i = 0; i < gradesInput.length; i++) {
+        if (gradeMax <= gradesInput[i]) {
+            gradeMax = gradesInput[i];
+        }
+    }
+    return (gradeMax);
 }
 
 // ---- Verwachte uitkomst: 9
-console.log(Math.max(highestGrade(grades)))
-console.log(Math.max(highestGrade([6, 4, 5])))
-console.log(Math.max(highestGrade([8, 9, 4, 6, 10])))
+console.log((highestGrade(grades)))
+console.log((highestGrade([6, 4, 5])))
+console.log((highestGrade([8, 9, 4, 6, 10])))
 
 /* 3b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd highestGrade, die een array van cijfers verwacht (zoals grades) en het hoogste cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 3a.
